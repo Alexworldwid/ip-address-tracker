@@ -15,7 +15,7 @@ interface InputIpInfoProps {
 const InputIpInfo: React.FC<InputIpInfoProps> = ({ ip, setIp, handleFetchData, ipData, loading, error }) => {
 
     return (
-        <section className="absolute top-10 lg:top-10 left-1/2 -translate-x-1/2 w-5/6 z-[1000]" role="region">
+        <section className="absolute top-10 lg:top-10 left-1/2 -translate-x-1/2 w-5/6 z-[1000] flex flex-col justify-center items-center" role="region">
             <h1 className="text-center mb-6 text-2xl font-semibold font-sans text-white">IP Address Tracker</h1>
             <div className="relative w-full flex items-center justify-center">
                 <div className="relative w-full lg:w-[40vw]">
@@ -35,11 +35,11 @@ const InputIpInfo: React.FC<InputIpInfoProps> = ({ ip, setIp, handleFetchData, i
                         {loading ? <span className='loader'></span> : <Image src={iconArrow} width={20} height={20} alt="icon-Arrow" priority />}
                     </button>
                 </div>
-                </div>
+            </div>
             {error && <p className='text-white'>{error.message}</p>}
 
             {!error && ipData && (
-                <div aria-label='ip information' className='w-full bg-white mt-6 lg:mt-12 rounded-2xl p-6 lg:grid lg:grid-cols-4 lg:py-10 lg:px-10 shadow-lg shadow-slate-400'>
+                <div aria-label='ip information' className='w-full bg-white mt-6 lg:mt-12 rounded-2xl p-6 lg:grid lg:grid-cols-4 lg:py-10 lg:px-10 shadow-lg shadow-slate-400 lg:max-w-[70vw]'>
                     <div className='lg:flex lg:items-center lg:border-r-4 w-full lg:justify-center'>
                         <p className='flex flex-col items-center mb-4  lg:items-start'>
                             <span className='font-bold font-mono tracking-wide text-lg text-opacity-80 text-slate-700'>IP ADDRESS</span>
