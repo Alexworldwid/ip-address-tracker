@@ -15,7 +15,7 @@ interface InputIpInfoProps {
 const InputIpInfo: React.FC<InputIpInfoProps> = ({ ip, setIp, handleFetchData, ipData, loading, error }) => {
 
     return (
-        <section className="absolute top-10 lg:top-20 left-1/2 -translate-x-1/2 w-5/6 z-[1000]" role="region">
+        <section className="absolute top-10 lg:top-10 left-1/2 -translate-x-1/2 w-5/6 z-[1000]" role="region">
             <h1 className="text-center mb-6 text-2xl font-semibold font-sans text-white">IP Address Tracker</h1>
             <div className="relative w-full flex items-center justify-center">
                 <div className="relative w-full lg:w-[40vw]">
