@@ -39,7 +39,7 @@ const InputIpInfo: React.FC<InputIpInfoProps> = ({ ip, setIp, handleFetchData, i
             {error && <p className='text-white'>{error.message}</p>}
 
             {!error && ipData && (
-                <div aria-label='ip information' className='w-full bg-white mt-6 lg:mt-12 rounded-2xl p-6 lg:grid lg:grid-cols-4 lg:py-20 lg:px-10 shadow-lg shadow-slate-400'>
+                <div aria-label='ip information' className='w-full bg-white mt-6 lg:mt-12 rounded-2xl p-6 lg:grid lg:grid-cols-4 lg:py-10 lg:px-10 shadow-lg shadow-slate-400'>
                     <div className='lg:flex lg:items-center lg:border-r-4 w-full lg:justify-center'>
                         <p className='flex flex-col items-center mb-4  lg:items-start'>
                             <span className='font-bold font-mono tracking-wide text-lg text-opacity-80 text-slate-700'>IP ADDRESS</span>
