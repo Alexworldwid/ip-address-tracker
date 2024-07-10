@@ -40,25 +40,34 @@ const InputIpInfo: React.FC<InputIpInfoProps> = ({ ip, setIp, handleFetchData, i
 
             {!error && ipData && (
                 <div aria-label='ip information' className='w-full bg-white mt-6 lg:mt-12 rounded-2xl p-6 lg:grid lg:grid-cols-4 lg:py-20 lg:px-10'>
-                    <p className='flex flex-col items-center mb-4 lg:border-r-4 '>
-                        <span className='font-bold font-mono tracking-wide text-lg text-opacity-80 text-slate-700'>IP ADDRESS</span>
-                        <span className='text-2xl font-bold'>{ipData.ip}</span>
-                    </p>
-
-                    <p className='flex flex-col items-center mb-4 lg:border-r-4 text-left'>
-                        <span className='font-bold font-mono tracking-wide text-lg text-opacity-80 text-slate-700'>LOCATION</span>
-                        <span className='text-2xl font-bold'>{ipData.location.city}, {ipData.location.country}</span>
-                    </p>
-
-                    <p className='flex flex-col items-center mb-4 lg:border-r-4'>
-                        <span className='font-bold font-mono tracking-wide text-lg text-opacity-80 text-slate-700'>TIMEZONE</span>
-                        <span className='text-2xl font-bold'>{ipData.location.timezone}</span>
-                    </p>
-
-                    <p className='flex flex-col items-center'>
-                        <span className='font-bold font-mono tracking-wide text-lg text-opacity-80 text-slate-700'>ISP</span>
-                        <span className='text-2xl font-bold'>{ipData.isp}</span>
-                    </p>
+                    <div className='lg:flex lg:items-center lg:border-r-4 w-full lg:justify-center'>
+                        <p className='flex flex-col items-center mb-4  lg:items-start'>
+                            <span className='font-bold font-mono tracking-wide text-lg text-opacity-80 text-slate-700'>IP ADDRESS</span>
+                            <span className='text-2xl font-bold'>{ipData.ip}</span>
+                        </p>
+                    </div>
+                    
+                    <div className='lg:flex lg:items-center lg:border-r-4 w-full lg:justify-center'>
+                        <p className='flex flex-col items-center mb-4 text-left lg:items-start'>
+                            <span className='font-bold font-mono tracking-wide text-lg text-opacity-80 text-slate-700'>LOCATION</span>
+                            <span className='text-2xl font-bold'>{ipData.location.city}, {ipData.location.country}</span>
+                        </p>
+                    </div>
+                    
+                    <div className='lg:flex lg:items-center lg:border-r-4 lg:justify-center'>
+                        <p className='flex flex-col items-center mb-4'>
+                            <span className='font-bold font-mono tracking-wide text-lg text-opacity-80 text-slate-700'>TIMEZONE</span>
+                            <span className='text-2xl font-bold'>{ipData.location.timezone}</span>
+                        </p>
+                    </div>
+                    
+                    <div className='lg:flex lg:items-center lg:justify-center'>
+                        <p className='flex flex-col items-center lg:items-start'>
+                            <span className='font-bold font-mono tracking-wide text-lg text-opacity-80 text-slate-700'>ISP</span>
+                            <span className='text-2xl font-bold'>{ipData.isp}</span>
+                        </p>
+                    </div>
+                    
                 </div>
             )}
         </section>
