@@ -24,7 +24,7 @@ const MapUpdater: React.FC<{ position: [number, number] }> = ({ position }) => {
 const Map: React.FC<MapProps> = ({ position, ipData }) => {
     const customIcon = icon({
         iconUrl: locationIcon.src, // Ensure the icon URL is correctly set
-        iconSize: [40, 40], // Adjust the size as needed
+        iconSize: [40, 50], // Adjust the size as needed
     });
 
     return (
